@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jessica's Special Day!</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Password Screen -->
+    <div id="password-screen">
+        <h1>Enter Password</h1>
+        <input type="password" id="password" placeholder="Password">
+        <button id="submit-password">Submit</button>
+    </div>
+
+    <!-- Splash Screen -->
+    <div id="splash-screen" style="display: none;">
+        <video autoplay muted loop id="bg-video">
+            <source src="C:/Users/neera/Desktop/Images/hotmendance.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <div id="mystery-box">
+            <p>kesenangan dimulai sekarang</p>
+            <button onclick="start()">Open the Box</button>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <div id="content" style="display: none;">
+        <header>
+            <h1 class="loading-text">Happy Birthday, Jessica!</h1>
+            <nav>
+                <ul>
+                    <li><a href="#about" onclick="showSection('about')">About</a></li>
+                    <li><a href="#memories" onclick="showSection('memories')">Memories</a></li>
+                    <li><a href="#next-project" onclick="showSection('next-project')">Next Project</a></li>
+                    <li><a href="#quiz" onclick="showSection('quiz')">Quiz</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <!-- About Section -->
+        <section id="about">
+            <h2>About</h2>
+            <p>Hey babe, this is your special day, and I want to make it as memorable as possible. I love you more than words can say, and I'm so grateful for every moment we share.</p>
+            <div class="timeline">
+                <div class="event checkpoint">
+                    <div class="event-date">15th May 2024</div>
+                    <div class="event-content">
+                        <p>We started talking on WhatsApp, and it didn't click instantly. Especially that dark humor, which really swept me off my feet.</p>
+                    </div>
+                </div>
+                <div class="event checkpoint">
+                    <div class="event-date">23rd May 2024</div>
+                    <div class="event-content">
+                        <p>The day when we started this beautiful relationship.</p>
+                    </div>
+                </div>
+                <div class="event checkpoint">
+                    <div class="event-date">23rd June 2024</div>
+                    <div class="event-content">
+                        <p>We celebrated 1st month and had our first date.</p>
+                    </div>
+                </div>
+                <div class="event checkpoint">
+                    <div class="event-date">23rd July 2024</div>
+                    <div class="event-content">
+                        <p>We completed months together.</p>
+                    </div>
+                </div>
+                <div class="event checkpoint">
+                    <div class="event-date">16th August 2024</div>
+                    <div class="event-content">
+                        <p>The special day of my lady.</p>
+                    </div>
+                </div>
+                <div class="event checkpoint">
+                    <div class="event-date">1st September 2024</div>
+                    <div class="event-content">
+                        <p>Our Bali adventure will begin</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Memories Section -->
+        <section id="memories" style="display: none;">
+            <h2>Memories</h2>
+            <div class="carousel">
+                <button class="prev" onclick="moveSlide(-1)">&#10094;</button>
+                <div class="carousel-inner">
+                    <img src="C:/Users/neera/Desktop/Images/image1.jpg" alt="Memory 1">
+                    <img src="C:/Users/neera/Desktop/Images/image2.jpg" alt="Memory 2">
+                    <img src="C:/Users/neera/Desktop/Images/image3.jpg" alt="Memory 3">
+                    <img src="C:/Users/neera/Desktop/Images/image4.jpg" alt="Memory 4">
+                    <img src="C:/Users/neera/Desktop/Images/image5.jpg" alt="Memory 5">
+                    <img src="C:/Users/neera/Desktop/Images/image6.jpg" alt="Memory 6">
+                    <img src="C:/Users/neera/Desktop/Images/image7.jpg" alt="Memory 7">
+                    <img src="C:/Users/neera/Desktop/Images/image8.jpg" alt="Memory 8">
+                    <img src="C:/Users/neera/Desktop/Images/image9.jpg" alt="Memory 9">
+                    <img src="C:/Users/neera/Desktop/Images/image10.jpg" alt="Memory 10">
+                    <img src="C:/Users/neera/Desktop/Images/image11.jpg" alt="Memory 11">
+                    <img src="C:/Users/neera/Desktop/Images/image12.jpg" alt="Memory 12">
+                    <img src="C:/Users/neera/Desktop/Images/image13.jpg" alt="Memory 13">
+                </div>
+                <button class="next" onclick="moveSlide(1)">&#10095;</button>
+            </div>
+        </section>
+
+        <!-- Next Project Section -->
+        <section id="next-project" style="display: none;">
+            <h2>Next Project</h2>
+            <p>Exciting things are on the horizon! Let's plan our next big adventure together, a spiritual trip to India.</p>
+            <img src="C:/Users/neera/Desktop/Images/UnMe.jpg" alt="Us Together">
+        </section>
+
+        <!-- Quiz Section -->
+        <section id="quiz" style="display: none;">
+            <h2>Quiz</h2>
+            <form id="quiz-form">
+                <div class="question">
+                    <p>1. What is Jessica's favorite color?</p>
+                    <input type="radio" id="q1a" name="q1" value="a">
+                    <label for="q1a">A) Blue</label><br>
+                    <input type="radio" id="q1b" name="q1" value="b">
+                    <label for="q1b">B) Pink</label><br>
+                    <input type="radio" id="q1c" name="q1" value="c">
+                    <label for="q1c">C) Green</label><br>
+                </div>
+                <div class="question">
+                    <p>2. Where did Jessica and Neeru first meet?</p>
+                    <input type="radio" id="q2a" name="q2" value="a">
+                    <label for="q2a">A) Bali</label><br>
+                    <input type="radio" id="q2b" name="q2" value="b">
+                    <label for="q2b">B) India</label><br>
+                    <input type="radio" id="q2c" name="q2" value="c">
+                    <label for="q2c">C) In a cafe</label><br>
+                </div>
+                <div class="question">
+                    <p>3. What is Jessica's favorite food?</p>
+                    <input type="radio" id="q3a" name="q3" value="a">
+                    <label for="q3a">A) Pizza</label><br>
+                    <input type="radio" id="q3b" name="q3" value="b">
+                    <label for="q3b">B) Sushi</label><br>
+                    <input type="radio" id="q3c" name="q3" value="c">
+                    <label for="q3c">C) Tacos</label><br>
+                </div>
+                <div class="question">
+                    <p>4. What is Neeraj's favorite hobby?</p>
+                    <input type="radio" id="q4a" name="q4" value="a">
+                    <label for="q4a">A) Cricket</label><br>
+                    <input type="radio" id="q4b" name="q4" value="b">
+                    <label for="q4b">B) Gym</label><br>
+                    <input type="radio" id="q4c" name="q4" value="c">
+                    <label for="q4c">C) Reading</label><br>
+                </div>
+                <div class="question">
+                    <p>5. What is Jessica's dream destination?</p>
+                    <input type="radio" id="q5a" name="q5" value="a">
+                    <label for="q5a">A) Paris</label><br>
+                    <input type="radio" id="q5b" name="q5" value="b">
+                    <label for="q5b">B) Bali</label><br>
+                    <input type="radio" id="q5c" name="q5" value="c">
+                    <label for="q5c">C) New York</label><br>
+                </div>
+                <button type="submit">Submit Answers</button>
+            </form>
+            <div id="code" style="display: none;">
+                <p>Congratulations! You've unlocked the secret code: <strong>morefuninbali</strong></p>
+                <p id="funny-message" style="display: none;">Keep this between us, and remember: it's all about the fun!</p>
+            </div>
+        </section>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
