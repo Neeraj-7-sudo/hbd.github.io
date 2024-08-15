@@ -60,7 +60,7 @@ document.body.appendChild(videoPopup);
 checkpoints.forEach((checkpoint, index) => {
     checkpoint.addEventListener('click', function () {
         const videoElement = videoPopup.querySelector('video');
-        videoElement.querySelector('source').src = `C:/Users/neera/Desktop/Videos/video${index + 1}.mp4`;
+        videoElement.querySelector('source').src = `videos/video${index + 1}.mp4`;
         videoElement.load();
         videoPopup.style.display = 'block';
     });
